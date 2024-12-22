@@ -27,18 +27,26 @@ public class myCustomBaseAdapter1 extends AppCompatActivity {
 
 
 
-//  Step 1: AdapterView: here it is ListView
+//  Step 1: AdapterView: This is the UI component that displays the data. 
+//          Here, it is a ListView (`myListViewForCustomBaseAdapter`).
+
         myListview = findViewById(R.id.myListViewForCustomBaseAdapter);
 
 
 
-//  step 2: Data Source: here it is Array
+// Step 2: Data Source: This is the collection of data that will be displayed in the AdapterView. 
+//         Here, it is a String array containing country names.
+
         String[] countries = {"India", "USA", "Germany", "Saudi Arabia", "France"};
 
-//  step 3: Adapter: acts as a bridge between the 'Data source' & 'AdapterView'
+// Step 3: Adapter: The adapter acts as a bridge between the d'Data source' & 'AdapterView'. 
+//         It prepares the data and populates the AdapterView with it.
+
         myCustomBaseAdapter2 myAdapter = new myCustomBaseAdapter2(this, countries);
 
-//  step 4: Link Listview with the Adapter
+// Step 4: Link the ListView with the Adapter using the `setAdapter` method. 
+//         This step connects the data source to the ListView for display.
+
         myListview.setAdapter(myAdapter);
 
     }
